@@ -30,7 +30,8 @@ marine_data_analysis_project/
 ├── data/
 │   ├── raw/                # Downloaded and generated CSVs (gitignored)
 │   └── processed/          # Merged analytical dataset (gitignored)
-├── outputs/figures/        # Publication-quality PNG figures (gitignored)
+├── figures/                # Output figures (included in repo)
+├── outputs/figures/        # Local pipeline output (gitignored)
 ├── main.py                 # Run full pipeline end-to-end
 └── requirements.txt
 ```
@@ -53,7 +54,7 @@ python main.py
 
 Fetches ~2,000–5,000 OBIS occurrence records (requires internet connection),
 generates the environmental grid, merges datasets at 0.5° resolution, and
-produces 4 figures in `outputs/figures/`.
+produces 4 figures in `outputs/figures/` (pre-generated examples in `figures/`).
 
 ## Run Tests
 
@@ -65,10 +66,10 @@ pytest -v
 
 | Figure | Description |
 |--------|-------------|
-| `fig1_species_richness_map.png` | Scatter map of species richness per 0.5° cell |
-| `fig2_correlation_matrix.png` | Spearman correlations: richness vs. environmental variables |
-| `fig3_sst_vs_richness.png` | SST × richness scatter with linear regression and R² |
-| `fig4_temporal_trend.png` | Species observations per year (2000–2024) |
+| ![fig1](figures/fig1_species_richness_map.png) | Scatter map of species richness per 0.5° cell |
+| ![fig2](figures/fig2_correlation_matrix.png) | Spearman correlations: richness vs. environmental variables |
+| ![fig3](figures/fig3_sst_vs_richness.png) | SST × richness scatter with linear regression and R² |
+| ![fig4](figures/fig4_temporal_trend.png) | Species observations per year (2000–2024) |
 
 ## Methodological Notes
 
